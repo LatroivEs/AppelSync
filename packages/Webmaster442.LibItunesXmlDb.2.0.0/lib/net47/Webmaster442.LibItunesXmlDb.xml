@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Webmaster442.LibItunesXmlDb</name>
+    </assembly>
+    <members>
+        <member name="T:Webmaster442.LibItunesXmlDb.FilterKind">
+            <summary>
+            Specifies filter kind for the Filter method
+            </summary>
+        </member>
+        <member name="F:Webmaster442.LibItunesXmlDb.FilterKind.None">
+            <summary>
+            No filtering
+            </summary>
+        </member>
+        <member name="F:Webmaster442.LibItunesXmlDb.FilterKind.Album">
+            <summary>
+            Filter string is an album name
+            </summary>
+        </member>
+        <member name="F:Webmaster442.LibItunesXmlDb.FilterKind.Artist">
+            <summary>
+            Filter string is an artist name
+            </summary>
+        </member>
+        <member name="F:Webmaster442.LibItunesXmlDb.FilterKind.Genre">
+            <summary>
+            Filter string is a Genre
+            </summary>
+        </member>
+        <member name="F:Webmaster442.LibItunesXmlDb.FilterKind.Year">
+            <summary>
+            Filter string represents a year
+            </summary>
+        </member>
+        <member name="T:Webmaster442.LibItunesXmlDb.IITunesXmlDb">
+            <summary>
+            Interface for ITunesXmlDb
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Tracks">
+            <summary>
+            Gets All Tracks from the Database
+            </summary>
+            <seealso cref="T:Webmaster442.LibItunesXmlDb.Track"/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Albums">
+            <summary>
+            Gets All Album names from the Database
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Artists">
+            <summary>
+            Gets All Artist names from the Database
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Genres">
+            <summary>
+            Gets All Genres from the Database
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Years">
+            <summary>
+            Gets All years from the Database
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Playlists">
+            <summary>
+            Gets All playlists from the Database
+            </summary>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.IITunesXmlDb.Filter(Webmaster442.LibItunesXmlDb.FilterKind,System.String)">
+            <summary>
+            Filter the Tracks by a criteria
+            </summary>
+            <param name="kind">Specifies filter kind</param>
+            <param name="param">Specifies Filter string</param>
+            <returns>Tracks maching the filter kind and string</returns>
+            <seealso cref="T:Webmaster442.LibItunesXmlDb.Track"/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.IITunesXmlDb.ReadPlaylist(System.String)">
+            <summary>
+            Gets a Playlists contents
+            </summary>
+            <param name="id">Plalist id</param>
+            <returns>Tracks in the specified playlist</returns>
+            <seealso cref="T:Webmaster442.LibItunesXmlDb.Track"/>
+        </member>
+        <member name="T:Webmaster442.LibItunesXmlDb.ITunesXmlDb">
+            <summary>
+            A class for Interacting iTunes xml database 
+            </summary>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDb.#ctor(System.String,Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions)">
+            <summary>
+            Load an iTunes XML File database
+            </summary>
+            <param name="fileLocation">full path of iTunes Music Library.xml</param>
+            <param name="options">Parser options. If not specified default options will be used.</param>
+            <seealso cref="T:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions"/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Tracks">
+            <inheritdoc/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Albums">
+            <inheritdoc/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Artists">
+            <inheritdoc/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Genres">
+            <inheritdoc/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Years">
+            <inheritdoc/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Playlists">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDb.Filter(Webmaster442.LibItunesXmlDb.FilterKind,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDb.ReadPlaylist(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.UserItunesDbPath">
+            <summary>
+            Return the default user specific path for iTunes Music Library.xml
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDb.UserHasItunesDb">
+            <summary>
+            Returns true, if the user has a iTunes Music Library.xml at the default location
+            </summary>
+        </member>
+        <member name="T:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions">
+            <summary>
+            A class representing various parser options
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.ExcludeNonExistingFiles">
+            <summary>
+            Exclude tracks that don't exist on the user's system
+            Default value is false
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.ParalelParsingEnabled">
+            <summary>
+            Enable or Disable paralel track parsing.
+            Default value is true
+            </summary>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.#ctor">
+            <summary>
+            Creates a new instance of ITunesXmlDbOptions
+            </summary>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.Equals(Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.op_Equality(Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions,Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions)">
+            <summary>
+            Compares two ITunesXmlDbOptions for equality
+            </summary>
+            <param name="options1">instance to compare</param>
+            <param name="options2">other instance to compare</param>
+            <returns>true, if the instances are equal, false if not</returns>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions.op_Inequality(Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions,Webmaster442.LibItunesXmlDb.ITunesXmlDbOptions)">
+            <summary>
+            Compares two ITunesXmlDbOptions for inequality
+            </summary>
+            <param name="options1">instance to compare</param>
+            <param name="options2">other instance to compare</param>
+            <returns>true, if the instances are not equal, false if they are</returns>
+        </member>
+        <member name="T:Webmaster442.LibItunesXmlDb.Track">
+            <summary>
+            A class representing tracks in the iTunes Database
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.TrackId">
+            <summary>
+            Track Id
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Name">
+            <summary>
+            Track Title
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Artist">
+            <summary>
+            Track Artist
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.AlbumArtist">
+            <summary>
+            Track Album Artist
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Composer">
+            <summary>
+            Track Composer
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Album">
+            <summary>
+            Track Album
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Genre">
+            <summary>
+            Track Genre
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Kind">
+            <summary>
+            Track Kind
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Size">
+            <summary>
+            Track size in bytes
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.PlayingTime">
+            <summary>
+            Track length
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.TrackNumber">
+            <summary>
+            Track number
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.Year">
+            <summary>
+            Track year
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.DateModified">
+            <summary>
+            Last modification date
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.DateAdded">
+            <summary>
+            Date added
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.BitRate">
+            <summary>
+            Track bitrate
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.SampleRate">
+            <summary>
+            Track sample rate
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.PlayCount">
+            <summary>
+            Play count
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.PlayDate">
+            <summary>
+            Last play date
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.PartOfCompilation">
+            <summary>
+            Part of compilation flag
+            </summary>
+        </member>
+        <member name="P:Webmaster442.LibItunesXmlDb.Track.FilePath">
+            <summary>
+            File Path
+            </summary>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.Track.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.Track.Equals(Webmaster442.LibItunesXmlDb.Track)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.Track.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.Track.op_Equality(Webmaster442.LibItunesXmlDb.Track,Webmaster442.LibItunesXmlDb.Track)">
+            <summary>
+            Compares two instances of Track for equality
+            </summary>
+            <param name="track1">instance to compare</param>
+            <param name="track2">other instance to compare</param>
+            <returns>true, if the two instances are equal, false if not</returns>
+        </member>
+        <member name="M:Webmaster442.LibItunesXmlDb.Track.op_Inequality(Webmaster442.LibItunesXmlDb.Track,Webmaster442.LibItunesXmlDb.Track)">
+            <summary>
+            Compares two instances of Track for inequality
+            </summary>
+            <param name="track1">instance to compare</param>
+            <param name="track2">other instance to compare</param>
+            <returns>false, if the two instances are not equal, false if they are</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,17 @@
+D:\Project\AppelSync\AppelSync\bin\Debug\AppelSync.exe.config
+D:\Project\AppelSync\AppelSync\bin\Debug\AppelSync.exe
+D:\Project\AppelSync\AppelSync\bin\Debug\AppelSync.pdb
+D:\Project\AppelSync\AppelSync\bin\Debug\Webmaster442.LibItunesXmlDb.xml
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.csproj.AssemblyReference.cache
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.csproj.SuggestedBindingRedirects.cache
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.Properties.Resources.resources
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.csproj.GenerateResource.cache
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.csproj.CoreCompileInputs.cache
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.csproj.CopyComplete
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.exe
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.pdb
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.Interface.resources
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.Help.iTunesXMLHelp.resources
+D:\Project\AppelSync\AppelSync\bin\Debug\Newtonsoft.Json.xml
+D:\Project\AppelSync\AppelSync\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Project\AppelSync\AppelSync\obj\Debug\AppelSync.csproj.Fody.CopyLocal.cache
