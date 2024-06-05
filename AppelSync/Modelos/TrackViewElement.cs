@@ -45,7 +45,7 @@ namespace AppelSync.Modelos
 
         public void SyncroTo(string path)
         {
-            string CopyName = "/" + Cancion.TrackId + "-" + Cancion.Name;
+            string CopyName = "/" + Cancion.Name + "-" + Cancion.TrackId;
             try {
                 FileInfo me = new FileInfo(Cancion.FilePath);
 

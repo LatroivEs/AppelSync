@@ -59,7 +59,7 @@ namespace AppelSync.Modelos
                     string[] filepath = tve.Cancion.FilePath.Split('.');// Para extraer el tipo del archivo
 
                     sb.AppendLine("#EXTINF:"+ tve.GetSongDuration() + " ,"+ tve.Cancion.Name);
-                    sb.Append(".\\Music\\").Append(tve.Cancion.TrackId).Append("-").Append(tve.Cancion.Name).Append(".").AppendLine(filepath[filepath.Length-1]);
+                    sb.Append(".\\Music\\").Append(tve.Cancion.Name).Append("-").Append(tve.Cancion.TrackId).Append(".").AppendLine(filepath[filepath.Length-1]);
                 }
 
             }
